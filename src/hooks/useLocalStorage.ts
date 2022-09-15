@@ -5,11 +5,12 @@ import useStateRef from './useStateRef';
 reference
 https://usehooks.com/useLocalStorage/
 */
+
 // Hook
 const useLocalStorage = <T>(key: string, initialValue: T) => {
   // State to store our value
   // Pass initial state function to useState so logic is only executed once
-  const [storedValue, setStoredValue] = useState(() => {
+  const [storedValue, setStoredValue] = useState<T>(() => {
     if (typeof window === 'undefined') {
       return initialValue;
     }
@@ -30,7 +31,7 @@ const useLocalStorage = <T>(key: string, initialValue: T) => {
   // Return a wrapped version of useState's setter function that ...
   // ... persists the new value to localStorage.
   const setValue = useCallback(
-    (valueOrFunction: T) => {
+    (valueOrFunction: T | ((arg0: T) => T)) => {
       try {
         // Allow value to be a function so we have same API as useState
         const valueToStore =
@@ -50,7 +51,7 @@ const useLocalStorage = <T>(key: string, initialValue: T) => {
     },
     [key, storedValueRef]
   );
-  return [storedValue, setValue];
+  return [storedValue, setValue] as const;
 };
 
 export default useLocalStorage;
