@@ -6,15 +6,15 @@ https://medium.com/programming-essentials/how-to-access-the-state-in-settimeout-
 import useStateRef from 'hooks/useStateRef';
 import { useEffect, useRef, useState } from 'react';
 
-interface ISampleStateRefProps {}
-const SampleStateRef: React.FC<ISampleStateRefProps> = ({}) => {
+interface ISampleUseStateRefProps {}
+const SampleUseStateRef: React.FC<ISampleUseStateRefProps> = ({}) => {
   return (
     <div>
       <ElegantSolution />
     </div>
   );
 };
-export default SampleStateRef;
+export default SampleUseStateRef;
 function Counter() {
   const [count, setCount] = useState(0);
   return (
