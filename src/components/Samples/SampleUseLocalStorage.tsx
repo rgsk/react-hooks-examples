@@ -1,5 +1,7 @@
 import useLocalStorage from 'hooks/useLocalStorage';
 
+// the best useCase for useLocalStorage can be theme choosen by user
+
 // here we demonstrate use of useLocalStorage
 interface ISampleUseLocalStorageProps {}
 const SampleUseLocalStorage: React.FC<ISampleUseLocalStorageProps> = ({}) => {
