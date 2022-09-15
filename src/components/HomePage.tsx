@@ -1,10 +1,10 @@
-import SampleUseWindowOrientation from './Samples/SampleUseWindowOrientation';
+import SampleUseDebounce from './Samples/SampleUseDebounce';
 
 interface IHomePageProps {}
 const HomePage: React.FC<IHomePageProps> = ({}) => {
   return (
     <div className="p-5">
-      <SampleUseWindowOrientation />
+      <SampleUseDebounce />
     </div>
   );
 };
