@@ -1,5 +1,9 @@
 import useWindowSize from 'hooks/useWindowSize';
 import NoSSR from 'react-no-ssr';
+/*
+for reference about NoSSR component
+https://blog.bitsrc.io/using-non-ssr-friendly-components-with-next-js-916f38e8992c
+*/
 
 interface ISampleUseWindowSizeProps {}
 const SampleUseWindowSize: React.FC<ISampleUseWindowSizeProps> = ({}) => {

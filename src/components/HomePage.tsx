@@ -1,10 +1,10 @@
-import SampleUseWindowSize from './Samples/SampleUseWindowSize';
+import SampleUseLocalStorage from './Samples/SampleUseLocalStorage';
 
 interface IHomePageProps {}
 const HomePage: React.FC<IHomePageProps> = ({}) => {
   return (
-    <div>
-      <SampleUseWindowSize />
+    <div className="p-5">
+      <SampleUseLocalStorage />
     </div>
   );
 };
