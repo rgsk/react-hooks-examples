@@ -23,7 +23,7 @@ function Counter() {
       <div>
         <button
           className="border border-black px-3"
-          onClick={() => setCount((prev) => prev + 1)}
+          onClick={() => setCount((prevCount) => prevCount + 1)}
         >
           Increment
         </button>
